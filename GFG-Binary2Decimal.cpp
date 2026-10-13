@@ -1,3 +1,4 @@
+// Tc: O(length), Sc: O(1)
 class Solution {
   public:
     int binaryToDecimal(string& b) {
