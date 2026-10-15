@@ -1,0 +1,53 @@
+//BRUTE APPROACH: TC: O(N) + O( loge n) + O(1) + O(N) = O(Log n), Sc: O(Log N).  
+
+class Solution {
+  public:
+  
+  void reverse(string &result){
+     int st = 0; 
+     int end = result.size()-1; 
+     
+     while(st < end){
+         swap(result[st], result[end]); 
+         st++; 
+         end--; 
+     }
+  }
+  
+  string Deci2Bin(int n){
+      if(n == 0) return "0"; 
+      string result = ""; 
+      while(n > 0){
+          if(n%2 == 1){
+              result += '1'; 
+          }else{
+              result += '0'; 
+          }
+          n = n/2; 
+      }
+      reverse(result);
+      return result; 
+  }
+    int setKthBit(int n, int k){
+      n |= (1 << k);
+        return n;
+    }
+    int binary2Deci(string b){
+        int num = 0; 
+        for(int i = 0; i<b.size(); i++){
+            num = num*2+(b[i]-'0');
+        }
+        return num; 
+    }
+};
+
+//Optimized : TC: O(1), Sc: O(1). 
+
+class Solution {
+  public:
+  
+    int setKthBit(int n, int k){
+        return n |= (1 << k);
+    }
+};
+
