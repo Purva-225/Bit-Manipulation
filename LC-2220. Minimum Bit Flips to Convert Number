@@ -1,0 +1,27 @@
+//Tc: O(31), Sc O(1);
+class Solution {
+public:
+    int minBitFlips(int start, int goal) {
+        int n = start ^ goal; 
+        int cnt = 0; 
+        for(int i = 0; i< 31; i++){
+            if(n & (1 << i)){
+                cnt = cnt + 1; 
+            }
+        }
+        return cnt;
+    }
+};
+// Better than prev one: TC: O(log n) , SC: O(1)
+class Solution {
+public:
+    int minBitFlips(int start, int goal) {
+        int n = start ^ goal; 
+        int cnt = 0; 
+        while(n > 0){
+            cnt += n & 1; 
+            n = n >> 1; 
+        }
+        return cnt;
+    }
+};
