@@ -45,6 +45,9 @@ My repository currently includes the following practice files:
 | 01 | Binary to Decimal Conversion | `GFG-Binary2Decimal.cpp` |
 | 02 | Decimal to Binary Conversion | `GFG-Convert Decimal to Binary.cpp` |
 | 03 | Set the K-th Bit | `Set kth Bit` |
+| 04 | 2220. Minimum Bit Flips to Convert Number | `LC- 2220 problem to return minimum flips`|
+
+
 
 I will keep adding more solutions as I practice questions from different platforms.
 
