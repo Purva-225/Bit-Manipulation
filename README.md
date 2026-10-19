@@ -46,10 +46,12 @@ My repository currently includes the following practice files:
 | 02 | Decimal to Binary Conversion | `GFG-Convert Decimal to Binary.cpp` |
 | 03 | Set the K-th Bit | `Set kth Bit` |
 | 04 | 2220. Minimum Bit Flips to Convert Number | `LC- 2220 problem to return minimum flips`|
-
-
-
-I will keep adding more solutions as I practice questions from different platforms.
+| 05 | 2220. Minimum Bit Flips to Convert Number | `LC- Single Number - I`|
+| 06 | 2220. Minimum Bit Flips to Convert Number | `LC- Single Number - II`|
+| 07 | 2220. Minimum Bit Flips to Convert Number | `LC- Single Number - III`|
+| 08 | 2220. Minimum Bit Flips to Convert Number | `LC- Divide two numbers without multiplication and division`|
+| 09 | 2220. Minimum Bit Flips to Convert Number | `LC- Power Set Bit Manipulation`|
+| 10 | 2220. Minimum Bit Flips to Convert Number | `LC- XOR of numbers in a given range`|
 
 ## 🛠️ My Problem-Solving Approach
 
