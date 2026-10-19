@@ -1,0 +1,19 @@
+// BRUTE: TC: O(N^2), SC: O(1). 
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+
+        for(int i = 0; i<nums.size(); i++){
+            vector<int> cnt(nums.size(),0); 
+            for(int j = 0; j<nums.size(); j++){
+                if(nums[j] == nums[i] && j != i){
+                   cnt[i] = 1; 
+                   break; 
+                }
+              }
+              if(cnt[i] == 0)
+              return nums[i];
+            }
+        return -1; 
+    }
+};
