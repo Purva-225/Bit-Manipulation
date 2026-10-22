@@ -17,3 +17,51 @@ public:
         return -1; 
     }
 };
+
+//Better: Tc: O(2n), sc: O(N) due to hashing. 
+class Solution {
+  public:
+    int missingNum(vector<int>& arr) {
+       int n = arr.size();
+      vector<int> hash(n+2,0); 
+     for(int i = 0; i<n; i++){
+        hash[arr[i]]++; 
+    }
+      for(int i = 1; i<=n+1; i++){
+           if(hash[i] == 0) return i;
+      }
+      return -1; 
+    }
+};
+
+//Optimal : 1) BY SUM. 2) BY XOR 
+//TC:O(N), SC:O(1). 
+//1)BY SUM: 
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int n = nums.size();
+       int sum = n*(n+1)/2; 
+       int s2 = 0; 
+       for(int i = 0; i<n; i++){
+        s2 += nums[i];  
+       }
+       return 2 * sum - s2; 
+    }
+};
+//2)BY XOR: 
+class Solution {
+  public:
+    int missingNum(vector<int>& arr) {
+       int n = arr.size();
+              int Xor1 = 0; 
+              int Xor2 = 0; 
+
+              for(int i = 0; i<n; i++){
+                 Xor1 = Xor1^ (i+1); 
+                  Xor2 = Xor2^arr[i]; 
+              }
+              Xor1 = Xor1 ^ (n+1);
+              return Xor1^Xor2; 
+    }
+};
