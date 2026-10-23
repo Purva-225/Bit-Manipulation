@@ -54,3 +54,18 @@ public:
         return -1; 
     }
 };
+
+// More Optimized One: Tc: O(n), Sc: O(1) 
+
+class Solution {
+public:
+    int singleNumber(vector<int>& nums){
+        int Ones = 0; 
+        int Twos = 0; 
+        for(int i = 0; i<nums.size(); i++){
+            Ones = (Ones ^ nums[i]) & ~ Twos; 
+            Twos = (Twos ^ nums[i]) & ~ Ones; 
+        }
+        return Ones; 
+    }
+};
