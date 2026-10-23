@@ -16,3 +16,24 @@ public:
        return -1; 
     }
 };
+
+// Better: using Bit manipulation, Tc: O(N * 32), Sc: O(1)
+
+class Solution {
+public:
+    int singleNumber(vector<int>& nums){
+        int n = nums.size();
+      int ans = 0; 
+      for(int Bitidx = 0; Bitidx<32; Bitidx++){
+        int cnt = 0; 
+        for(int i = 0; i<n; i++){
+            if(nums[i] & (1 << Bitidx))
+                 cnt++;
+        }
+         if(cnt % 3 == 1){
+                ans = ans | (1<< Bitidx);
+            }
+      }
+      return ans; 
+    }
+};
